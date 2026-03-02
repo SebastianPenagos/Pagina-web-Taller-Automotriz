@@ -1,0 +1,57 @@
+---
+import RepuestoCard from "./RepuestoCard.astro";
+---
+
+<section
+  id="repuestos"
+  class="py-20 px-6 bg-linear-to-br from-gray-50 to-gray-100"
+>
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+        Repuestos de Calidad
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Contamos con repuestos originales y de primera calidad para tu vehículo
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <RepuestoCard
+        icon="🔩"
+        title="Compresores A/C"
+        description="Compresores de aire acondicionado para todas las marcas."
+      />
+
+      <RepuestoCard
+        icon="📦"
+        title="Radiadores"
+        description="Radiadores originales. Alta eficiencia térmica."
+      />
+
+      <RepuestoCard
+        icon="💨"
+        title="Condensadores"
+        description="Condensadores para sistema de A/C. Máxima durabilidad."
+      />
+
+      <RepuestoCard
+        icon="🔧"
+        title="Gas Refrigerante"
+        description="R134a y R1234yf. Producto certificado y de calidad."
+      />
+
+      <RepuestoCard
+        icon="⚡"
+        title="Termostatos"
+        description="Control preciso de temperatura. Para todas las marcas."
+      />
+
+      <RepuestoCard
+        icon="🌀"
+        title="Mangueras y Abrazaderas"
+        description="Mangueras de alta presión y temperatura. Resistentes y duraderas."
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,119 @@
+---
+
+---
+
+<header
+  class="fixed top-0 w-full bg-linear-to-r from-gray-900 to-gray-800 text-white z-50 shadow-xl"
+>
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div class="text-orange-600 text-3xl">🔧</div>
+      <div>
+        <div
+          class="text-xl md:text-2xl font-extrabold text-orange-600 uppercase tracking-wide leading-tight"
+        >
+          DIS AIRE ACONDICIONADO
+        </div>
+        <div class="text-xs md:text-sm text-gray-300 font-medium">
+          Y RADIADORES NV
+        </div>
+      </div>
+    </div>
+
+    <ul class="hidden md:flex gap-8">
+      <li>
+        <a
+          href="#servicios"
+          class="hover:text-orange-600 transition-colors font-medium"
+          >Servicios</a>
+      </li>
+      <li>
+        <a
+          href="#inventario"
+          class="hover:text-orange-600 transition-colors font-medium"
+          >Inventario</a>
+      </li>
+      <li>
+        <a
+          href="#repuestos"
+          class="hover:text-orange-600 transition-colors font-medium"
+          >Repuestos</a>
+      </li>
+      <li>
+        <a
+          href="#porque"
+          class="hover:text-orange-600 transition-colors font-medium"
+          >Nosotros</a>
+      </li>
+      <li>
+        <a
+          href="#contacto"
+          class="hover:text-orange-600 transition-colors font-medium"
+          >Contacto</a>
+      </li>
+    </ul>
+
+    <!-- Mobile menu button -->
+    <button id="mobile-menu-button" class="md:hidden text-white">
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 py-4">
+    <ul class="space-y-4">
+      <li>
+        <a
+          href="#servicios"
+          class="block hover:text-orange-600 transition-colors">Servicios</a>
+      </li>
+      <li>
+        <a
+          href="#inventario"
+          class="block hover:text-orange-600 transition-colors">Inventario</a>
+      </li>
+      <li>
+        <a
+          href="#repuestos"
+          class="block hover:text-orange-600 transition-colors">Repuestos</a>
+      </li>
+      <li>
+        <a href="#porque" class="block hover:text-orange-600 transition-colors"
+          >Nosotros</a>
+      </li>
+      <li>
+        <a
+          href="#contacto"
+          class="block hover:text-orange-600 transition-colors">Contacto</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  mobileMenuButton?.addEventListener("click", () => {
+    mobileMenu?.classList.toggle("hidden");
+  });
+
+  // Close mobile menu when clicking a link
+  const mobileLinks = mobileMenu?.querySelectorAll("a");
+  mobileLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.add("hidden");
+    });
+  });
+</script>

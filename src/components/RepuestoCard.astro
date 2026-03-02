@@ -1,0 +1,48 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+const { icon, title, description } = Astro.props;
+---
+
+<div
+  class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 repuesto-card"
+>
+  <div
+    class="h-56 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center text-8xl"
+  >
+    {icon}
+  </div>
+
+  <div class="p-6">
+    <h3 class="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+    <p class="text-gray-600 mb-4">{description}</p>
+
+    <div class="text-3xl font-bold text-orange-600 mb-4">Consultar precio</div>
+
+    <a
+      href="#contacto"
+      class="block w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg text-center transition-colors"
+    >
+      Cotizar
+    </a>
+  </div>
+</div>
+
+<style>
+  .repuesto-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
